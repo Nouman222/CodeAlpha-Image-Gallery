@@ -1,41 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<h1>Image Gallery</h1>
+  <h1>Image Gallery</h1>
 
-<div class="filters">
-    <button onclick="filterImages('all')">All</button>
-    <button onclick="filterImages('nature')">Nature</button>
-    <button onclick="filterImages('city')">City</button>
-    <button onclick="filterImages('village')">Village</button>
-</div>
+  <div class="filters">
+    <button data-filter="all">All</button>
+    <button data-filter="nature">Nature</button>
+    <button data-filter="city">City</button>
+    <button data-filter="village">Village</button>
+  </div>
 
-<div class="gallery">
-    <img src="images/image1.jpg" class="gallery-img nature" onclick="openLightbox(this)">
-    <img src="images/image2.jpg" class="gallery-img nature" onclick="openLightbox(this)">
-    <img src="images/image3.jpg" class="gallery-img nature" onclick="openLightbox(this)">
-    <img src="images/image4.jpg" class="gallery-img nature" onclick="openLightbox(this)">
-    <img src="images/city1.jpg" class="gallery-img city" onclick="openLightbox(this)">
-    <img src="images/city2.jpg" class="gallery-img city" onclick="openLightbox(this)">
-    <img src="images/city3.jpg" class="gallery-img city" onclick="openLightbox(this)">
-    <img src="images/city4.jpg" class="gallery-img city" onclick="openLightbox(this)">
-</div>
+  <div class="gallery">
+    <!-- Nature -->
+    <img src="images/image1.jpg" class="gallery-img nature" loading="lazy" />
+    <img src="images/image2.jpg" class="gallery-img nature" loading="lazy" />
+    <img src="images/image3.jpg" class="gallery-img nature" loading="lazy" />
+    <img src="images/image4.jpg" class="gallery-img nature" loading="lazy" />
+    <img src="images/image5.jpg" class="gallery-img nature" loading="lazy" />
 
-<!-- Lightbox -->
-<div id="lightbox">
-    <span class="close" onclick="closeLightbox()">×</span>
-    <button class="prev" onclick="changeImage(-1)">❮</button>
-    <img id="lightbox-img">
-    <button class="next" onclick="changeImage(1)">❯</button>
-</div>
+    <!-- City -->
+    <img src="images/city1.jpg" class="gallery-img city" loading="lazy" />
+    <img src="images/city2.jpg" class="gallery-img city" loading="lazy" />
+    <img src="images/city3.jpg" class="gallery-img city" loading="lazy" />
+    <img src="images/city4.jpg" class="gallery-img city" loading="lazy" />
+    <img src="images/city5.jpg" class="gallery-img city" loading="lazy" />
 
-<script src="script.js"></script>
+    <!-- Village -->
+    <img src="images/v1.jpg" class="gallery-img village" loading="lazy" />
+    <img src="images/v2.jpg" class="gallery-img village" loading="lazy" />
+    <img src="images/v3.jpg" class="gallery-img village" loading="lazy" />
+    <img src="images/v4.jpg" class="gallery-img village" loading="lazy" />
+    <img src="images/v5.jpg" class="gallery-img village" loading="lazy" />
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <span class="close">&times;</span>
+    <button class="prev">&#10094;</button>
+    <img id="lightbox-img" />
+    <button class="next">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
